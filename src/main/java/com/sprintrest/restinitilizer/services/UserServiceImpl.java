@@ -37,4 +37,14 @@ public class UserServiceImpl implements UserServices  {
 		System.out.println("Okay");
 	}
 
+	@Override
+	public void updateUser(User user, int id) {
+		for (int i = 0;i< this.user.size(); i++) {
+			if (this.user.get(i).getUserId() == id){
+				this.user.add(i,user);
+				return;
+			}
+		};
+	}
+
 }

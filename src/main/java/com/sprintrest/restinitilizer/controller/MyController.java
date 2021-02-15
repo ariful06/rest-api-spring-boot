@@ -30,4 +30,9 @@ public class MyController {
 	public void addNewUser(@RequestBody User user){
 		userService.addNewUser(user);
 	}
+
+	@RequestMapping(method = RequestMethod.PUT,value = "/user/{id}")
+	public void updateUser(@RequestBody User user,@PathVariable int id){
+		userService.updateUser(user,id);
+	}
 }
