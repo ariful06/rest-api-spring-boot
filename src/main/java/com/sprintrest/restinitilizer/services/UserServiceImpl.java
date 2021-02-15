@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserServices  {
 
 	
 	@Override
-	public List<User> login(String userName, String password) {
+	public List<User> getAllUsers() {
 		return  user;
 	}
 

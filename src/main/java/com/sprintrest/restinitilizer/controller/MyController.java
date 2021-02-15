@@ -17,18 +17,10 @@ public class MyController {
 	@Autowired
 	private UserServices userService;
 	
-	@GetMapping("/hello")
-	public List<User> firstApi() {
-		return userService.login("Arifuk","alsdf");
+	@GetMapping("/users")
+	public List<User> getAllUsers() {
+		return userService.getAllUsers();
 	}
-	
-	@PostMapping("/login")
-	public User login() {
-	User user = new User();
-		this.userService.login("Ariful Haque", "anna");
-		return user;
-	}
-
 	@RequestMapping("/user/{id}")
 	public User getUser(@PathVariable int id){
 		return userService.getSingleUser(id);
